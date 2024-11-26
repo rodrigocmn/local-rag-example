@@ -1,0 +1,7 @@
+faiss-gpu-cu12
+pypdf
+langchain
+langchain-community
+langchain_text_splitters
+langchain_ollama
+streamlit
