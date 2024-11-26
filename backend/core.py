@@ -1,3 +1,4 @@
+import dotenv
 import os
 
 from typing import List, Dict, Any
@@ -10,10 +11,11 @@ from langchain.chains.history_aware_retriever import create_history_aware_retrie
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from embeddings.ollama_local import get_embeddings_function
 
-PDF_PATH="pdf"
-DB_PATH="ollama-local"
-EMBEDDING_MODEL="hf.co/tensorblock/gte-Qwen2-1.5B-instruct-GGUF:Q5_K_M"
-CHAT_MODEL="incept5/llama3.1-claude"
+dotenv.load_dotenv()    
+PDF_PATH=os.environ.get("PDF_PATH")
+DB_PATH=os.environ.get("DB_PATH")
+EMBEDDING_MODEL=os.environ.get("EMBEDDING_MODEL")
+CHAT_MODEL=os.environ.get("CHAT_MODEL")
 
 def run_llm(query: str, chat_history: List[Dict[str,Any]]):
     # load the chat model

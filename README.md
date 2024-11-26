@@ -2,6 +2,11 @@
 
 This is an example of RAG implementation using local LLMs with Ollama and FAISS vector database.
 
+# Requirements
+
+- Create a `.env` file according to the `.env.example` file
+- Ollama (https://ollama.com/) installed in your local machine serving the models configured in the `.env` file
+
 # Installation
 
 1. Create a python virtual environment and activate it.
